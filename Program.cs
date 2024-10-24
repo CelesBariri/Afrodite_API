@@ -17,7 +17,19 @@ builder.Services.AddEntityFrameworkSqlServer()
     options => options.UseSqlServer(builder.Configuration.GetConnectionString("DataBase"))
     );
 
-builder.Services.AddScoped <IUsersRepositorio, UsersRepositorio>();
+builder.Services.AddScoped <IAgendamentoRepositorio, AgendamentoRepositorio>();
+builder.Services.AddScoped <IAssinaturaClubeRepositorio, AssinaturaClubeRepositorio>();
+builder.Services.AddScoped <IClienteRepositorio, ClienteRepositorio>();
+builder.Services.AddScoped <IClubeRepositorio, ClubeRepositorio>();
+builder.Services.AddScoped <IFormaPagamentoRepositorio, FormaPagamentoRepositorio>();
+builder.Services.AddScoped <IPagamentoAgendamentoRepositorio, PagamentoAgendamentoRepositorio>();
+builder.Services.AddScoped <IPagamentoAssinaturaRepositorio, PagamentoAssinaturaRepositorio>();
+builder.Services.AddScoped <IProcedimentoRepositorio, ProcedimentoRepositorio>();
+builder.Services.AddScoped <IProfissionalRepositorio, ProfissionalRepositorio>();
+builder.Services.AddScoped <ITipoClubeRepositorio, TipoClubeRepositorio>();
+builder.Services.AddScoped <ITipoPlanoRepositorio, TipoPlanoRepositorio>();
+builder.Services.AddScoped <ITipoProcedimentoRepositorio, TipoProcedimentoRepositorio>();
+builder.Services.AddScoped <ITipoProfissionalRepositorio, TipoProfissionalRepositorio>();
 
 builder.Services.AddCors(options =>
 {
